@@ -37,9 +37,11 @@ bool PcapAdapterListPrint();
 bool PcapRecv(pcap_t* handle);
 bool PcapRecvArpReply(pcap_t* handle, const uint8_t* ip, uint8_t* mac);
 
-
 // pcap_send.cpp
 bool PcapSend(pcap_t* handle, uint8_t* packet, int len);
+
+// arp_spoofing.cpp
+bool ArpSpoofing(pcap_t* handle, const uint8_t* myMac, const uint8_t* targetIP, const uint8_t* attMac, const uint8_t* attIP);
 
 // check.cpp
 

