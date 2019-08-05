@@ -73,6 +73,10 @@
     <IncludePath>C:\WpdPack\Include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\WpdPack\Lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>C:\WpdPack\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\WpdPack\Lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -83,8 +87,9 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>wpcap.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>wpcap.lib;iphlpapi.lib;Ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -101,12 +106,15 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
+      <SDLCheck>false</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>WIN32;HAVE_REMOTE;WPCAP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>wpcap.lib;iphlpapi.lib;Ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -126,8 +134,10 @@
   <ItemGroup>
     <ClCompile Include="char_2_uint.cpp" />
     <ClCompile Include="check.cpp" />
+    <ClCompile Include="get_ip.cpp" />
     <ClCompile Include="get_mac.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="pcap_init.cpp" />
     <ClCompile Include="pcap_l3.cpp" />
     <ClCompile Include="pcap_l2.cpp" />
     <ClCompile Include="pcap_recv.cpp" />

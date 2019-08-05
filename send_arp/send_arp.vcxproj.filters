@@ -19,6 +19,9 @@
     <Filter Include="소스 파일\convert">
       <UniqueIdentifier>{3a1e1344-8d9b-4c34-999b-f6e95181986f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\pcap\osi_layer">
+      <UniqueIdentifier>{d7745d48-e760-4b87-a4e4-0ac8b2bd0a21}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -46,10 +49,16 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="pcap_l2.cpp">
-      <Filter>소스 파일\pcap</Filter>
+      <Filter>소스 파일\pcap\osi_layer</Filter>
     </ClCompile>
     <ClCompile Include="pcap_l3.cpp">
+      <Filter>소스 파일\pcap\osi_layer</Filter>
+    </ClCompile>
+    <ClCompile Include="pcap_init.cpp">
       <Filter>소스 파일\pcap</Filter>
+    </ClCompile>
+    <ClCompile Include="get_ip.cpp">
+      <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
