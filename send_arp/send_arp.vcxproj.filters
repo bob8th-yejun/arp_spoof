@@ -13,5 +13,54 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\pcap">
+      <UniqueIdentifier>{89f5f132-8124-4ab7-8d65-1010022baa39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\convert">
+      <UniqueIdentifier>{3a1e1344-8d9b-4c34-999b-f6e95181986f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="get_mac.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="char_2_uint.cpp">
+      <Filter>소스 파일\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="pcap_recv.cpp">
+      <Filter>소스 파일\pcap</Filter>
+    </ClCompile>
+    <ClCompile Include="uint_2_char.cpp">
+      <Filter>소스 파일\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="pcap_send.cpp">
+      <Filter>소스 파일\pcap</Filter>
+    </ClCompile>
+    <ClCompile Include="check.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="pcap_l2.cpp">
+      <Filter>소스 파일\pcap</Filter>
+    </ClCompile>
+    <ClCompile Include="pcap_l3.cpp">
+      <Filter>소스 파일\pcap</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="header.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="type.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
