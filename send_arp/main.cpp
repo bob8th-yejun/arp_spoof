@@ -16,11 +16,12 @@ int main(int argc, char* argv[]) {
 		puts("(ex) send_arp.exe rpcap://\Device\NPF_{960B29EE-E457-4712-8FE0-2FE256D232F6} 192.168.0.1 192.168.3.63\n");
 		puts("[인터페이스 목록]");
 		PcapAdapterListPrint();
+		system("pause");
 		return -1;
 	}
-	char* adapter = argv[2];
-	char* cSenderIP = argv[3];
-	char* cTargetIP = argv[4];
+	char* adapter = argv[1];
+	char* cSenderIP = argv[2];
+	char* cTargetIP = argv[3];
 #endif
 	pcap_t* handle = PcapInit(adapter);
 
