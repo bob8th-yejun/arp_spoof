@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "header.h"
 
-// #define DEV
+#define DEV
 
 int main(int argc, char* argv[]) {
 #ifdef DEV
